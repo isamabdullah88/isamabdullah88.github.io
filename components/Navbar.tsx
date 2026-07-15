@@ -24,7 +24,7 @@ export default function Navbar() {
         
         {/* Logo / Branding */}
         <Link href="/" className="font-mono font-bold text-lg tracking-tight text-zinc-900 dark:text-zinc-50">
-          ~/portfolio
+          Academic Portfolio
         </Link>
 
         {/* Navigation Links & Socials/Toggle */}
