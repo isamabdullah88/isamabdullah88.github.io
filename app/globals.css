@@ -1,6 +1,8 @@
 @import "katex/dist/katex.min.css";
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
