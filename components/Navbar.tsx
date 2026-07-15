@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {/* GitHub SVG */}
             <a 
-              href="https://github.com" 
+              href="https://github.com/isamabdullah88" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
@@ -67,7 +67,7 @@ export default function Navbar() {
 
             {/* LinkedIn SVG */}
             <a 
-              href="https://linkedin.com" 
+              href="hhttps://www.linkedin.com/in/isambalghari/" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="text-zinc-500 hover:text-zinc-950 dark:text-zinc-400 dark:hover:text-zinc-50 transition-colors"
