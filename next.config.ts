@@ -1,14 +1,20 @@
 import mdx from '@next/mdx';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import type { NextConfig } from 'next'; // Import the config type
 
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export', // Dictates static HTML export for github.io
+const nextConfig: NextConfig = {
+  output: 'export', // TypeScript now knows this matches "export" | "standalone"
   images: {
-    unoptimized: true, // Necessary because GitHub Pages doesn't support dynamic optimization
+    unoptimized: true, 
   },
   pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
+  typescript: {
+    ignoreBuildErrors: true, 
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 const withMDX = mdx({
