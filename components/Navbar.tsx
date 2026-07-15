@@ -15,6 +15,7 @@ export default function Navbar() {
     { name: 'Projects', href: '/projects' },
     { name: 'Books', href: '/books' },
     { name: 'Publications', href: '/publications' },
+    { name: 'CV', href: '/cv' },
   ];
 
   return (
