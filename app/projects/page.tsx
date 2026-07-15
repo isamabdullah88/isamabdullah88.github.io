@@ -6,27 +6,27 @@ import { motion } from 'framer-motion';
 const projects = [
   {
     title: 'DSpinGNN',
-    description: 'An E(3)-equivariant Graph Neural Network combined with a Residual MLP architecture designed to predict magnetic exchange coupling parameters ($J$) in materials like $\\text{CrI}_3$. Successfully scales first-principles calculations from 8 atoms to large-scale simulations containing 3,200 atoms.',
+    description: 'An E(3)-equivariant Graph Neural Network combined with a Residual MLP architecture designed to predict magnetic exchange coupling parameters (J) in materials like CrI3. Successfully scales first-principles calculations from 8 atoms to large-scale simulations containing 3,200 atoms.',
     tags: ['PyTorch', 'e3nn', 'DFT', 'Quantum ESPRESSO', 'HPC'],
-    links: { github: 'https://github.com' }
+    links: { github: 'https://github.com/isamabdullah88/DSpinGNN' }
+  },
+  {
+    title: 'SpinDFT',
+    description: 'An automated, crash-proof HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J for high-throughput data generation.',
+    tags: ['Python', 'HPC', 'Quantum ESPRESSO', 'Wannier90', 'TB2J'],
+    links: { github: 'https://github.com/isamabdullah88/SpinDFT' }
   },
   {
     title: 'Phystrackx',
     description: 'An independent, proprietary scientific tracking suite engineered for experimental physical laboratories. Streamlines sub-millisecond video tracking, real-time trajectory visualization, and high-frequency data acquisition.',
     tags: ['Computer Vision', 'Data Acquisition', 'GUI Design', 'C++ / Python'],
-    links: { github: 'https://github.com' }
+    links: { github: 'https://github.com/isamabdullah88/phystrackx' }
   },
   {
     title: 'NequIP (From Scratch)',
-    description: 'A clean, modular reproduction of NequIP (E(3)-equivariant neural network for interatomic potentials) developed completely from scratch using PyTorch and the e3nn library. Built to deeply understand equivariant linear layers ($o3.\\text{Linear}$) and tensor products.',
+    description: 'A clean, modular reproduction of NequIP (E(3)-equivariant neural network for interatomic potentials) developed completely from scratch using PyTorch and the e3nn library. Built to deeply understand equivariant linear layers (o3 Linear) and tensor products.',
     tags: ['PyTorch', 'e3nn', 'Equivariant ML'],
-    links: { github: 'https://github.com' }
-  },
-  {
-    title: 'Non-linear Balloon Dynamics',
-    description: 'An independent research project simulating the non-linear hyperelastic dynamics of two interconnected rubber balloons. Modeled physical relaxation oscillations to design heart-like pneumatic devices.',
-    tags: ['Mathematical Modeling', 'Scientific Computing', 'Python'],
-    links: { github: 'https://github.com' }
+    links: { github: 'https://github.com/isamabdullah88/NequIP' }
   }
 ];
 
