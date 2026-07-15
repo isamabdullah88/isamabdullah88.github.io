@@ -38,7 +38,13 @@ export default function Home() {
           Computational Physicist & Software Engineer
         </p>
         <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
-          I specialize in building machine learning models for atomic-scale simulations, high-performance computing (HPC) workflows, and scaling first-principles calculations. With a solid foundation of six years in professional software engineering coupled with an MS in Physics, I bridge the gap between rigorous theoretical modeling and robust, scalable software architecture.
+          I am a computational physicist and software engineer bridging a six-year industry career in deep learning with an MS in Physics. Working at the intersection of geometric machine learning and condensed matter physics, I translate fundamental physical symmetries into highly scalable software. I bring production-level architecture and from-scratch code implementation to complex quantum materials simulations.
+          <br></br>
+          <br></br>
+          My research focuses on overcoming length-scale limitations in materials science through physics-informed deep learning. I developed DSpinGNN, a custom $E(3)$-equivariant Graph Neural Network that embeds quantum-chemistry biases to scale spin-lattice dynamics from 8 to 3,200 atoms. This scale-up enables the simulation of emergent macroscopic phenomena, such as strain-driven magnetic phase co-existence, that are inaccessible to direct first-principles calculations.  
+          <br></br>
+          <br></br>
+          To power these workflows, I engineered SpinDFT, an automated, crash-proof HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J for high-throughput data generation. Additionally, I independently designed and deployed PhysTrackX, an open-source, multi-sensor video-tracking suite used to streamline data acquisition in experimental physics laboratories.
         </p>
       </motion.section>
 
