@@ -4,7 +4,7 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import native Next.js Image component
 import { motion, Variants } from 'framer-motion';
-import profilePic from '../public/profile.jpg'; 
+import profilePic from '../public/Profile.jpg'; 
 // Adjust the relative path dots if your folder structure places page.tsx deeper
 
 // Quick container animations for a smooth page load
@@ -43,15 +43,9 @@ export default function Home() {
           <p className="text-lg text-zinc-600 dark:text-zinc-400 font-medium">
             Computational Physicist & Software Engineer
           </p>
-          <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed space-y-4">
+          <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed">
             <p>
-              I am a computational physicist and software engineer bridging a six-year industry career in deep learning with an MS in Physics. Working at the intersection of geometric machine learning and condensed matter physics, I translate fundamental physical symmetries into highly scalable software. I bring production-level architecture and from-scratch code implementation to complex quantum materials simulations.
-            </p>
-            <p>
-              My research focuses on overcoming length-scale limitations in materials science through physics-informed deep learning. I developed DSpinGNN, a custom E(3)-equivariant Graph Neural Network that embeds quantum-chemistry biases to scale spin-lattice dynamics from 8 to 3,200 atoms. This scale-up enables the simulation of emergent macroscopic phenomena, such as strain-driven magnetic phase co-existence, that are inaccessible to direct first-principles calculations.  
-            </p>
-            <p>
-              To power these workflows, I engineered SpinDFT, an automated, crash-proof HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J for high-throughput data generation. Additionally, I independently designed and deployed PhysTrackX, an open-source, multi-sensor video-tracking suite used to streamline data acquisition in experimental physics laboratories.
+              I am a computational physicist and software engineer bridging a six-year industry career in deep learning with an MS in Physics. Working at the intersection of geometric machine learning and condensed matter physics, I develop <strong className="font-semibold text-zinc-950 dark:text-zinc-50">DSpinGNN</strong>—a custom $E(3)$-equivariant Graph Neural Network that embeds analytical quantum-chemistry biases to scale spin-lattice simulations from 8 to 3,200 atoms, uncovering emergent macroscopic phenomena inaccessible to direct first-principles calculations. To power these physics-informed workflows, I engineered <strong className="font-semibold text-zinc-950 dark:text-zinc-50">SpinDFT</strong>, an automated, high-throughput HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J, alongside deploying <strong className="font-semibold text-zinc-950 dark:text-zinc-50">PhysTrackX</strong>, an open-source, multi-sensor video-tracking suite for experimental laboratories.
             </p>
           </div>
         </div>
