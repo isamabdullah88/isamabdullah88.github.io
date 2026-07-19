@@ -4,6 +4,8 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image'; // Import native Next.js Image component
 import { motion, Variants } from 'framer-motion';
+import profilePic from '../public/profile.jpg'; 
+// Adjust the relative path dots if your folder structure places page.tsx deeper
 
 // Quick container animations for a smooth page load
 const containerVariants: Variants = {
@@ -56,12 +58,13 @@ export default function Home() {
 
         {/* Right Side: Responsive Professional Headshot */}
         <div className="flex-shrink-0 mx-auto md:mx-0">
-          <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm">
+          <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm">
             <Image
-              src="/profile.jpg"
+              src={profilePic} // Passed as an object reference
               alt="Isam Balghari"
-              fill
-              className="object-cover"
+              width={192} // Sets base size matching md:w-48 (48 * 4px = 192px)
+              height={192}
+              className="object-cover w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48"
               priority
             />
           </div>
