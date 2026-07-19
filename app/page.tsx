@@ -2,6 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image'; // Import native Next.js Image component
 import { motion, Variants } from 'framer-motion';
 
 // Quick container animations for a smooth page load
@@ -29,23 +30,43 @@ export default function Home() {
       animate="visible"
       variants={containerVariants}
     >
-      {/* 1. HERO SECTION */}
-      <motion.section variants={itemVariants} className="space-y-4">
-        <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
-          Hi, I'm <span className="text-blue-600 dark:text-blue-400">Isam Balghari</span>
-        </h1>
-        <p className="text-lg text-zinc-600 dark:text-zinc-400 font-medium">
-          Computational Physicist & Software Engineer
-        </p>
-        <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed max-w-2xl">
-          I am a computational physicist and software engineer bridging a six-year industry career in deep learning with an MS in Physics. Working at the intersection of geometric machine learning and condensed matter physics, I translate fundamental physical symmetries into highly scalable software. I bring production-level architecture and from-scratch code implementation to complex quantum materials simulations.
-          <br></br>
-          <br></br>
-          My research focuses on overcoming length-scale limitations in materials science through physics-informed deep learning. I developed DSpinGNN, a custom $E(3)$-equivariant Graph Neural Network that embeds quantum-chemistry biases to scale spin-lattice dynamics from 8 to 3,200 atoms. This scale-up enables the simulation of emergent macroscopic phenomena, such as strain-driven magnetic phase co-existence, that are inaccessible to direct first-principles calculations.  
-          <br></br>
-          <br></br>
-          To power these workflows, I engineered SpinDFT, an automated, crash-proof HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J for high-throughput data generation. Additionally, I independently designed and deployed PhysTrackX, an open-source, multi-sensor video-tracking suite used to streamline data acquisition in experimental physics laboratories.
-        </p>
+      {/* 1. HERO SECTION WITH INTEGRATED PHOTO */}
+      <motion.section variants={itemVariants} className="flex flex-col-reverse md:flex-row gap-8 items-start justify-between">
+        
+        {/* Left Side: Copy/Text content */}
+        <div className="space-y-4 max-w-2xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50 sm:text-5xl">
+            Hi, I'm <span className="text-blue-600 dark:text-blue-400">Isam Balghari</span>
+          </h1>
+          <p className="text-lg text-zinc-600 dark:text-zinc-400 font-medium">
+            Computational Physicist & Software Engineer
+          </p>
+          <div className="text-zinc-600 dark:text-zinc-400 leading-relaxed space-y-4">
+            <p>
+              I am a computational physicist and software engineer bridging a six-year industry career in deep learning with an MS in Physics. Working at the intersection of geometric machine learning and condensed matter physics, I translate fundamental physical symmetries into highly scalable software. I bring production-level architecture and from-scratch code implementation to complex quantum materials simulations.
+            </p>
+            <p>
+              My research focuses on overcoming length-scale limitations in materials science through physics-informed deep learning. I developed DSpinGNN, a custom E(3)-equivariant Graph Neural Network that embeds quantum-chemistry biases to scale spin-lattice dynamics from 8 to 3,200 atoms. This scale-up enables the simulation of emergent macroscopic phenomena, such as strain-driven magnetic phase co-existence, that are inaccessible to direct first-principles calculations.  
+            </p>
+            <p>
+              To power these workflows, I engineered SpinDFT, an automated, crash-proof HPC orchestrator integrating Quantum ESPRESSO, Wannier90, and TB2J for high-throughput data generation. Additionally, I independently designed and deployed PhysTrackX, an open-source, multi-sensor video-tracking suite used to streamline data acquisition in experimental physics laboratories.
+            </p>
+          </div>
+        </div>
+
+        {/* Right Side: Responsive Professional Headshot */}
+        <div className="flex-shrink-0 mx-auto md:mx-0">
+          <div className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-48 md:h-48 rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-sm">
+            <Image
+              src="/profile.jpg"
+              alt="Isam Balghari"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
+        </div>
+
       </motion.section>
 
       <hr className="border-zinc-200 dark:border-zinc-800" />
@@ -68,7 +89,7 @@ export default function Home() {
               DSpinGNN
             </h3>
             <p className="mt-2 text-sm text-zinc-600 dark:text-zinc-400 line-clamp-3">
-              An E(3)-equivariant Graph Neural Network combined with a Residual MLP built to predict exchange coupling parameters ($J$) in magnetic 2D materials. Successfully scaled DFT computations from 8 atoms to large-scale simulations containing 3,200 atoms.
+              An E(3)-equivariant Graph Neural Network combined with a Residual MLP built to predict exchange coupling parameters (J) in magnetic 2D materials. Successfully scaled DFT computations from 8 atoms to large-scale simulations containing 3,200 atoms.
             </p>
             <div className="mt-4 flex flex-wrap gap-2">
               <span className="px-2 py-0.5 text-xs font-mono rounded bg-zinc-200/50 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-300">PyTorch</span>
