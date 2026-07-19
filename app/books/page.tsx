@@ -134,7 +134,7 @@ export default function BooksPage() {
   };
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-12">
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">Scientific Readings & Solutions</h1>
         <p className="mt-2 text-zinc-600 dark:text-zinc-400">
