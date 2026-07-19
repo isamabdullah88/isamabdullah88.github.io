@@ -32,7 +32,7 @@ const projects = [
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-8">
+    <div className="space-y-8 max-w-3xl mx-auto px-4 sm:px-6 py-8 space-y-12">
       <div>
         <h1 className="text-3xl font-extrabold tracking-tight text-zinc-900 dark:text-zinc-50">Projects & Research</h1>
         <p className="mt-2 text-zinc-600 dark:text-zinc-400">
@@ -40,7 +40,7 @@ export default function ProjectsPage() {
         </p>
       </div>
 
-      <div className="grid gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4">
         {projects.map((project, idx) => (
           <motion.div
             key={project.title}
